@@ -1,0 +1,22 @@
+.tablefilets{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.tableendtooltip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#deletebutton{
+    background-color: var(--secondary) !important;
+    color: white !important;
+    border: var(--dark) !important;
+}
+#editbutton{
+    background-color: var(--primary) !important;
+    color: white !important;
+    border: var(--dark) !important;
+}
