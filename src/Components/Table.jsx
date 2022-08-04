@@ -22,7 +22,7 @@ function Table(props) {
         <table id="datatable" className="table table-bordered dt-responsive  nowrap w-100">  
         <div className="tablefilters">  
         </div>
-          <thead>
+          <thead className='mytableheader' >
             <tr>
               {props.columns.map((e)=>
               <th>{e}</th>
@@ -31,7 +31,7 @@ function Table(props) {
             </tr>
 
           </thead>
-          <tbody>
+          <tbody className='mytablebody' >
              {   props.data.map((item)=>
             <tr key={item.id}>
               {
@@ -39,15 +39,19 @@ function Table(props) {
               <td>{index}</td>
               )}
               {(props.cellactions=="true")? <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" id='deletebutton' class="btn btn-primary"> <AiTwotoneDelete/> </button>
-  <button type="button" id='editbutton' class="btn btn-primary">   <i class='bx bxs-edit-alt' ></i> </button>
+  <button type="button" id='deletebutton' onClick={()=>props.deleteaction(item.ID)} class="btn btn-primary"> <AiTwotoneDelete/> </button>
+  <button type="button" id='editbutton' onClick={()=>props.editaction(item.ID)} class="btn btn-primary">   <i class='bx bxs-edit-alt' ></i> </button>
 </div> : "" }
             </tr>
            ) }
          
           </tbody>
          
-          <div className="tableendtooltip ">
+        
+
+
+        </table>
+        <div className="tableendtooltip ">
               <nav aria-label="Page navigation example">
                  <ul class="pagination pagination-md">
                     <li class="page-item">
@@ -68,9 +72,6 @@ function Table(props) {
                     </ul>
                 </nav>
           </div>
-
-
-        </table>
       </div>
     </div>
   </div> {/* end col */}

@@ -20,3 +20,17 @@
     color: white !important;
     border: var(--dark) !important;
 }
+#editbutton i{
+    color: white !important;
+}
+.mytableheader{
+    background-color: var(--secondary);
+    color: white;
+}
+.mytablebody{
+    border-top: white !important;
+}
+
+.page-item a:hover{
+    color: black !important;
+}

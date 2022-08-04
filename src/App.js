@@ -20,6 +20,9 @@ import Dashboard from "./modules/dashboard/Dashboard";
 // Contact 
 import Contact from "./modules/Contact/Contact";
 
+// Careers
+import Newjob from "./modules/Careers/Newjob";
+
 function App() {
   return (
     <div>
@@ -33,6 +36,7 @@ function App() {
      <Route index element={<Dashboard/>} />
      <Route path="/dashboard" element={<Dashboard/>} />
      <Route path="/contact" element={<Contact/>} />
+     <Route path="/newjob" element={<Newjob/>} />
   </Route>
 
 </Routes>

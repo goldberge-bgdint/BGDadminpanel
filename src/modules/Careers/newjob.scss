@@ -1,0 +1,18 @@
+.newjobbody{
+    width: 100% !important;
+}
+#button-addon2{
+    background-color: var(--primary) !important;
+    color: white !important;
+    transition-duration: 0.3s;
+}
+#button-addon2:hover{
+    border:1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    background-color: transparent !important;
+}
+
+.descriptionpart {
+    border: 1px solid red;
+    height: 475px;
+}

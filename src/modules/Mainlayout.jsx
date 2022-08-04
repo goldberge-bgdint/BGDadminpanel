@@ -1,5 +1,5 @@
 import React from 'react'
-import bgdlogo from "../images/compnaylogo.png"
+import bgdlogo from "../images/whitelogo.png"
 
 import "../assets/css/bootstrap.min.css"
 import "../assets/css/app.min.css"
@@ -8,6 +8,7 @@ import "../assets/css/icons.min.css"
 import "./mainlayout.scss"
 
 import { Outlet, Link  } from "react-router-dom";
+import { IoMdArrowDropdownCircle } from "@react-icons/all-files/io/IoMdArrowDropdownCircle";
 
 function Mainlayout() {
   return (
@@ -126,64 +127,88 @@ function Mainlayout() {
     </div>
   </header>
   {/* ========== Left Sidebar Start ========== */}
-  <div className="vertical-menu">
+  <div className="vertical-menu" id='sidenavbarbottom'>
     <div data-simplebar className="h-100">
       {/*- Sidemenu */}
       <div id="sidebar-menu">
         {/* Left Menu Start */}
         <ul className="metismenu list-unstyled" id="side-menu">
+
+           {/* 1st submenue */}  
          
         <li className="menu-title" key="t-pages">Blog posts</li>
           <li>
           <Link to="/jobs"> 
-            <a  className="waves-effect">
-              <i className="bx bx-detail" />
-              <span key="t-blog">Blog</span>
-            </a>
+
+          <a class="waves-effect" id='submenueheading' data-bs-toggle="collapse" href="#submenue1" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i class='bx bx-world' ></i>
+          <span className='submenuelink' key="t-blog">Blog</span>
+          <span className='submenueicon' > <IoMdArrowDropdownCircle/> </span>
+          </a>
+
+
           </Link>
-            <ul className="sub-menu" aria-expanded="false">
+            <ul class="sub-menu collapse" id="submenue1"  aria-expanded="false">
             <Link to="/jobs"> 
-              <li><a  key="t-blog-list"> <i class='bx bxl-blogger'></i>Blog posts</a></li>
+              <li><a  key="t-blog-list">Blog posts</a> </li>
             </Link>
             <Link to="/newjob"> 
-              <li><a  key="t-blog-grid">  <i class='mdi mdi-book-edit' ></i> New Blog</a></li>
+              <li><a  key="t-blog-grid">New Blog</a></li>
             </Link>
             </ul>
           </li>
 
+
+          {/* 2nd submenue */}
+
+
+
           <li className="menu-title" key="t-pages">Career</li>
           <li>
           <Link to="/jobs"> 
-            <a  className="waves-effect">
-            <i class='bx bx-world' ></i>
-              <span key="t-blog">Careers</span>
-            </a>
+
+          <a class="waves-effect" id='submenueheading' data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i class='bx bxs-briefcase'></i>
+              <span  className='submenuelink'  key="t-blog">Careers</span>
+              <span className='submenueicon' > <IoMdArrowDropdownCircle/> </span>
+          </a>
+
+
           </Link>
-            <ul className="sub-menu" aria-expanded="false">
+
+
+            <ul class="sub-menu collapse" id="collapseExample" aria-expanded="false">
             <Link to="/jobs"> 
-              <li><a  key="t-blog-list"> <i class='bx bxs-edit-alt' ></i>Jobs posted</a></li>
+              <li><a  key="t-blog-list">Jobs posted</a></li>
             </Link>
             <Link to="/newjob"> 
-              <li><a  key="t-blog-grid"> <i class='bx bx-plus-circle' ></i> New job</a></li>
+              <li><a  key="t-blog-grid">New job</a></li>
             </Link>
             <Link to="/applicants"> 
-              <li><a  key="t-blog-details"> <i class='bx bxs-file' ></i> Applicants</a></li>
+              <li><a  key="t-blog-details">Applicants</a></li>
             </Link>
             </ul>
+
+
           </li>
+
+
+          {/* 3rd sub menue */}
    
           <li className="menu-title" key="t-pages">leads</li>
          
           
           <li>
           <Link to="/contact"> 
-            <a  className="waves-effect">
-            <i class='bx bxs-message-rounded-dots'></i>
-              <span key="t-blog">website leads</span>
-            </a>
+          <a class="waves-effect" id='submenueheading' data-bs-toggle="collapse" href="#submenue3" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i class='bx bxs-contact'></i>
+          <span  className='submenuelink'  key="t-blog">website leads</span>
+          <span className='submenueicon' > <IoMdArrowDropdownCircle/> </span>
+          </a>
+  
             </Link>
-            <ul className="sub-menu" aria-expanded="false">
-              <Link to="/contact"> <li>  <a key="t-blog-list"> <i class='bx bxs-edit-alt' ></i>  Contact form </a></li> </Link>
+            <ul class="sub-menu collapse" id="submenue3"  aria-expanded="false">
+              <Link to="/contact"> <li>  <a key="t-blog-list">Contact form </a></li> </Link>
           
             </ul>
           </li>
